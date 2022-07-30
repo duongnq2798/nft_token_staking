@@ -22,7 +22,7 @@ const WalletConnectionProvider: FC<Props> = ({ children }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = process.env.NEXT_PUBLIC_SOLANA_NETWORK as WalletAdapterNetwork;
 
-  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_SOLANA_RPC_HOST!, []);
+  const endpoint = useMemo(() => process.env.NEXT_PUBLIC_SOLANA_RPC_HOST! || 'https://api.devnet.solana.com/', []);
 
   const wallets = useMemo(
     () => [
