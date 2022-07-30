@@ -9,6 +9,8 @@ Max Supply: 1000000000 ERIC
 Pool ID: HaqMSzRjVNXfnEtHXPvJk3xqKRxebXrGHMXa4xqLZi4c
 ```
 
+<img src="img-cover.png"/>
+
 # Token Staking
 
 ```sh
@@ -17,5 +19,5 @@ Token staking:
 Max Supply: 1000000000 ERIC
 Pool ID: 8E7cQ1GSd54YUrz8fnnvdEwY6Nwd3z4WuvqWtWd9UFWE
 ```
+<img src="img-token.png"/>
 
-# Raffle
