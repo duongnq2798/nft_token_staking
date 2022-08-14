@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
 `
 
 export const Text = styled.p`

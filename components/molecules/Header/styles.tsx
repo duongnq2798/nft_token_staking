@@ -25,14 +25,21 @@ export const CenterMenu = styled.div`
   }
 `
 
-export const MenuItem = styled.span`
+export const MenuItem: any = styled.div`
   background: linear-gradient(
     to right,
     rgb(236, 72, 153),
     rgb(239, 68, 68),
     rgb(234, 179, 8)
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   cursor: pointer;
+  transform: skewX(-10deg);
+  padding: 4px 20px;
+  color: white;
+  opacity: ${(props: any )=> props.active ? 1 : 0.5};
+  transition: 0.2s easy-in;
+
+  :hover {
+    opacity: 1;
+  }
 `

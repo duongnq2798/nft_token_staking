@@ -49,6 +49,7 @@ import {
   useStakePoolMetadata,
 } from 'hooks'
 import CustomHead from 'components/atoms/CustomHead'
+import NoWallet from 'components/molecules/NoWallet'
 
 const Container = styled.div`
   max-width: 1440px;
@@ -84,11 +85,11 @@ const TokenStaking = () => {
   )
   const [loadingClaimRewards, setLoadingClaimRewards] = useState(false)
   const [showFungibleTokens, setShowFungibleTokens] = useState(true)
-  const allowedTokenDatas = useAllowedTokenDatas(showFungibleTokens)
+  const allowedTokenDatas = useAllowedTokenDatas(true)
   const { data: stakePoolMetadata } = useStakePoolMetadata()
   const rewardDistributorTokenAccountData = useRewardDistributorTokenAccount()
   const { UTCNow } = useUTCNow()
-
+  
   useEffect(() => {
     focusManager.setFocused(false)
 
@@ -107,7 +108,7 @@ const TokenStaking = () => {
         stakePoolMetadata?.tokenStandard === TokenStandard.Fungible
       )
   }, [stakePoolMetadata?.name, router])
-
+  console.log("stakePoolMetadata", stakePoolMetadata)
   async function handleClaimRewards(tk: any) {
     const stakedSelected = [tk]
     if (stakedSelected.length > 4) {
@@ -610,7 +611,7 @@ const TokenStaking = () => {
               : ''
           }
         />
-
+        <NoWallet />
         {(getTokens().notStakeToken || []).map(
           (tk: AllowedTokenData, index) => {
             return (

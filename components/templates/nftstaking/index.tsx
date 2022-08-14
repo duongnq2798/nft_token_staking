@@ -48,6 +48,7 @@ import {
   useStakePoolMaxStaked,
   useStakePoolMetadata,
 } from 'hooks'
+import NoWallet from 'components/molecules/NoWallet'
 
 const Container = styled.div`
   max-width: 1440px;
@@ -615,7 +616,7 @@ const NFTStaking = () => {
               : ''
           }
         />
-
+        <NoWallet />
         <ListStakeCard
           loading={[loadingStake, loadingUnstake, loadingClaimRewards]}
           currentTkAddress={currentTkAddress}

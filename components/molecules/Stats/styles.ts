@@ -6,14 +6,12 @@ export const Wrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin: 1rem;
-    padding: 12px 0;
-
+    padding: 32px 0;
     border-radius: 12px;
     border: 4px double transparent;
     background-image: linear-gradient(#171a19,#171a19),radial-gradient(98.54% 76.07% at 93.79% 17.7%,#f196d1 0,#cf97ec 23.75%,#99bded 47.71%,#9cecca 66.98%,#ffddb4 82.6%,#f896c5 100%);
     background-origin: border-box;
     background-clip: padding-box,border-box;
-
     margin-bottom: 40px;
 `;
 
